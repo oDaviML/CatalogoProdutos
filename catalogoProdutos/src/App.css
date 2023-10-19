@@ -1,0 +1,186 @@
+.ProdutosContainer{
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.ProdutosCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.Card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  
+}
+
+.Card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 204px;
+}
+
+.CardInfo {
+  margin-top: 1rem;
+  min-height: 72px;
+  
+}
+
+.CardInfo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.CardInfo p {
+  margin-bottom: 0.5rem;
+}
+
+/* Header */
+
+.Header {
+  background-color: #ff6347;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+}
+
+.Logo img {
+  margin-right: 10px;
+  width: 100px;
+}
+
+.Logo h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.Nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.Nav ul li {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Nav ul li:hover {
+  color: #000000;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.CartItemCount {
+  margin-left: 5px;
+}
+
+/* Modal */
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.HeaderModal {
+  background-color: #a5311c;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 8px 8px 0 0;
+}
+
+.CloseButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.ModalInfo {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.ModalInfo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ModalInfo p {
+  margin-bottom: 0.5rem;
+}
+
+.ModalInfo p:last-child {
+  margin-bottom: 0;
+}
+
+.ModalFooter {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.Separator {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #000;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.ModalCarrinho input {
+  width: 50px;
+  height: 25px;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #ccc;
+}
+
+.ModalCarrinho button {
+  border-radius: 8px;
+  border: none;
+  background-color: #227222;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.ReactModalPortal .ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
