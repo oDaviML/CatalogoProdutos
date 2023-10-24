@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <HeaderMenu />
-      <div className='ProdutosContainer'>
-        <ProdutosCard />
-      </div>
+      <ProdutosCard />
     </>
   )
 }

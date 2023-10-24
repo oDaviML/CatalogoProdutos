@@ -10,7 +10,7 @@ interface Produto {
     {
       imagem: "https://anamariabraga.globo.com/wp-content/uploads/2020/08/pizza-margherita.jpg",
       nome: "Pizza Margherita",
-      preco: 15.99,
+      preco: 39.99,
       descricao: "Uma deliciosa pizza Margherita com molho de tomate, mussarela, manjericão fresco e azeite de oliva.",
       avaliacao: 4.5
     },
@@ -73,14 +73,14 @@ interface Produto {
     {
       imagem: "https://www.pingodoce.pt/wp-content/uploads/2015/12/1449086533",
       nome: "Risoto de Cogumelos",
-      preco: 18.99,
+      preco: 28.99,
       descricao: "Risoto cremoso com cogumelos selvagens, queijo parmesão e ervas frescas.",
-      avaliacao: 4.7
+      avaliacao: 3.5
     },
     {
       imagem: "https://static.itdg.com.br/images/1200-630/d59df3673a8fcd365af0caac830ed377/324510-original.jpg",
       nome: "Salmão Grelhado",
-      preco: 16.99,
+      preco: 40.99,
       descricao: "Filé de salmão grelhado com molho de manteiga e ervas, servido com vegetais sauté.",
       avaliacao: 4.4
     },

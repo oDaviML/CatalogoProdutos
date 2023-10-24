@@ -52,6 +52,19 @@
   margin-bottom: 0.5rem;
 }
 
+.headerProdutos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+#filtro {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Header */
 
 .Header {
@@ -184,3 +197,4 @@
 .ReactModalPortal .ReactModal__Overlay.ReactModal__Overlay--after-open {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
+

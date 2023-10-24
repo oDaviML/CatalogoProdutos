@@ -5,7 +5,6 @@ import carrinhoService from '../model/carrinhoService';
 const carrinhoServiceInstance = new carrinhoService();
 
 const HeaderMenu = () => {
-
     return (
         <header className="Header">
         <div className="Logo">

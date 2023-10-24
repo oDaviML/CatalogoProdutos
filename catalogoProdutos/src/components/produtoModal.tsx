@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import { FiShoppingCart } from 'react-icons/fi';
 import {AiOutlineClose} from 'react-icons/ai';
 import carrinhoService from "../model/carrinhoService";
+import Rating from '@mui/material/Rating';
 
 interface Produto {
   nome: string;
@@ -25,6 +26,7 @@ const carrinhoServiceInstance = new carrinhoService();
 const ProdutoModal = ({ produto, isOpen, onRequestClose }: { produto: Produto; isOpen: boolean; onRequestClose: () => void }) => {
   const closeModal = () => {
     onRequestClose();
+    setQuantidade(1);
   };
 
   const [quantidade, setQuantidade] = useState(1);
@@ -34,7 +36,6 @@ const ProdutoModal = ({ produto, isOpen, onRequestClose }: { produto: Produto; i
   };
 
   const handleAdicionarCarrinho = () => {
-    closeModal();
     produtoCarrinho = {
       nome: produto.nome,
       quantidade: quantidade,
@@ -43,8 +44,13 @@ const ProdutoModal = ({ produto, isOpen, onRequestClose }: { produto: Produto; i
     }
 
     carrinhoServiceInstance.adicionarCarrinho(produtoCarrinho);
-    console.log(carrinhoServiceInstance.totaldeitens());
+    closeModal();
+
+    // Não consegui exibir no carrinho
     console.log(carrinhoServiceInstance.listarCarrinho());
+    console.log("Quantidade:" + carrinhoServiceInstance.totaldeitens());
+    console.log("Total:" + carrinhoServiceInstance.totalCarrinho().toFixed(2));
+    
   };
 
   return (
@@ -56,7 +62,7 @@ const ProdutoModal = ({ produto, isOpen, onRequestClose }: { produto: Produto; i
         <h2>{produto.nome}</h2>
         <p>{produto.descricao}</p>
         <p style={{ color: "green", fontWeight: "bold" }}>R${produto.preco}</p>
-        <p>Avaliação: {produto.avaliacao}</p>
+        <Rating name="read-only" value={produto.avaliacao} precision={0.5} readOnly />
       </div>
       <div className="ModalFooter">
         <div className="Separator"></div>
